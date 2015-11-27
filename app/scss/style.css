@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/*inställning iconer*/
+/* line 3, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.fa-times, .fa-bars {
+  color: white;
+  padding: 0 5px 5px 5px;
+  cursor: pointer; }
+
+/*inställning vänster X icon*/
+/* line 11, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-left label {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 4px;
+  font-size: 18px;
+  border-bottom: 1px solid black; }
+  @media screen and (min-width: 800px) {
+    /* line 11, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+    .off-canvas-left label {
+      display: none; } }
+
+/*inställning höger X icon*/
+/* line 25, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-right label {
+  display: flex;
+  padding-top: 4px;
+  font-size: 18px;
+  border-bottom: 1px solid black; }
+  @media screen and (min-width: 800px) {
+    /* line 25, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+    .off-canvas-right label {
+      display: block; } }
+
+/*döljer vänster bar vid 800px+*/
+@media screen and (min-width: 800px) {
+  /* line 38, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+  .nav-left {
+    display: none; } }
+
+/*font länkar i menuer*/
+/* line 45, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-left a, .off-canvas-right a {
+  text-decoration: none;
+  font-size: 20px;
+  color: aliceblue;
+  line-height: 1.3; }
+
+/* line 54, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-left li {
+  border-bottom: 1px solid black;
+  padding: 10px; }
+  /* line 57, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+  .off-canvas-left li:hover {
+    opacity: 0.6; }
+  @media screen and (min-width: 800px) {
+    /* line 54, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+    .off-canvas-left li {
+      border: 0px; } }
+
+/* line 63, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-right li {
+  border-bottom: 1px solid black;
+  padding: 10px; }
+  /* line 66, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+  .off-canvas-right li:hover {
+    opacity: 0.6; }
+
+/*close one canvas when other opens, close all canvas when X is pressed*/
+/* line 70, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+#empty-nav {
+  display: none; }
+
+/*LEFT--MENU------------------------------------------------------------*/
+/* line 79, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-left {
+  overflow: hidden;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background-color: #0F0F0F;
+  color: red; }
+  @media screen and (min-width: 800px) {
+    /* line 79, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+    .off-canvas-left {
+      position: static;
+      width: auto;
+      height: 40px;
+      border-radius: 3px; }
+      /* line 94, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+      .off-canvas-left ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-around; }
+        /* line 98, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+        .off-canvas-left ul li {
+          padding: 5px; } }
+
+/* line 108, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+#left-nav-toggle {
+  display: none; }
+
+/* line 111, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+#left-nav-toggle:checked + .off-canvas-left {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+
+/*RIGHT--MENU------------------------------------------------------------*/
+/* line 125, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+.off-canvas-right {
+  overflow: hidden;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #0F0F0F;
+  color: red;
+  width: 40%;
+  text-align: right; }
+  @media screen and (min-width: 800px) {
+    /* line 125, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+    .off-canvas-right {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 5px;
+      left: auto;
+      opacity: 0;
+      width: auto;
+      height: 0px; }
+      /* line 147, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+      .off-canvas-right ul {
+        border: 1px solid #0a0a0a;
+        border-bottom-left-radius: 10px; } }
+
+/* line 153, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+#right-nav-toggle {
+  display: none; }
+
+/* line 157, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+#right-nav-toggle:checked + .off-canvas-right {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+  @media screen and (min-width: 800px) {
+    /* line 157, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_nav.scss */
+    #right-nav-toggle:checked + .off-canvas-right {
+      transform: none;
+      opacity: 1;
+      height: 84%;
+      border-bottom-left-radius: 5px;
+      transition: height 0.4s, opacity 0, 1s linear; } }
+
+/* line 1, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_login.scss */
+.loginform {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  height: 30vh;
+  padding-top: 30px; }
+  /* line 8, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_login.scss */
+  .loginform #usermail, .loginform #password {
+    height: 15px; }
+  /* line 11, C:/Users/Patric/Desktop/Prov_responsive/app/scss/_login.scss */
+  .loginform #submitbtn, .loginform p {
+    margin: 5px; }
+
+/*denna sida använder mixin som brytpunkt*/
+/*resterande sidor använder denna*/
+/* line 14, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+body {
+  background-color: black; }
+
+/* line 22, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (min-width: 800px) {
+    /* line 22, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    .container {
+      width: 80%;
+      margin: auto;
+      max-width: 1000px; } }
+
+/* line 40, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+  padding-top: 10px;
+  font-size: 25px; }
+  /* line 50, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  header h1 {
+    color: white;
+    font-family: fantasy; }
+  @media only screen and (min-width: 800px) {
+    /* line 40, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    header {
+      justify-content: space-between;
+      padding-left: 10px; } }
+
+/* line 62, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.main {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue; }
+
+/* line 67, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.new-game {
+  width: 100%;
+  height: 70vh; }
+
+/* line 71, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.redir {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh; }
+
+@media only screen and (min-width: 800px) {
+  /* line 79, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  .info_mobile {
+    display: none; } }
+
+/* line 84, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.info_desk {
+  display: none; }
+  @media only screen and (min-width: 800px) {
+    /* line 84, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    .info_desk {
+      display: inline; } }
+
+/* line 91, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.news {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #0f0f0f;
+  flex-direction: column;
+  align-items: center;
+  color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid dodgerblue; }
+  /* line 104, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  .news h1 {
+    padding-top: 0.6em;
+    font-family: sans-serif;
+    font-size: 30px; }
+  /* line 108, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  .news h2 {
+    font-size: 15px;
+    padding-bottom: 2px; }
+  /* line 112, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  .news h3 {
+    color: aliceblue; }
+  /* line 115, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  .news p {
+    padding-top: 0.6em;
+    font-family: sans-serif; }
+  /* line 118, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+  .news img {
+    max-width: 100%; }
+  @media only screen and (min-width: 800px) {
+    /* line 91, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    .news {
+      border-color: aliceblue; } }
+
+/* line 127, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.news1 {
+  order: 2; }
+  @media only screen and (min-width: 800px) {
+    /* line 127, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    .news1 {
+      order: 0; } }
+
+/* line 128, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.news2 {
+  order: 1; }
+  @media only screen and (min-width: 800px) {
+    /* line 128, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    .news2 {
+      order: 1; } }
+
+/* line 129, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+.news3 {
+  order: 3; }
+  @media only screen and (min-width: 800px) {
+    /* line 129, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+    .news3 {
+      order: 2; } }
+
+/* line 131, C:/Users/Patric/Desktop/Prov_responsive/app/scss/style.scss */
+footer {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center; }
+
+/*# sourceMappingURL=style.css.map */
